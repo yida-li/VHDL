@@ -11,9 +11,12 @@ end overflow;
 
 architecture arch_overflow of overflow is
 	signal adding, substracting : std_logic;
+	signal complement: std_logic_vector(3 downto 0):
 begin
+	complement<=std_logic_vector(signed(not(y)) + 1);
+
 	adding <= ( x(3) and y(3) ) xor r(3);
-	substracting <= ( r(3) and y(3) ) xor x(3);
+	substracting <= ( x(3) and complement(3) ) xor r(3);
 	overflow <= adding when sel = '0' else
 			  substracting;
 end arch_overflow;
