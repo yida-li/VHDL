@@ -105,7 +105,7 @@ end process;
 
 -- ALU Multiplexer
 with func select
-	output <= (x_in(3 downto 2) & Zero_Const2(3 downto 2)  ) when "00", -- lui
+	output <= (x_in(1 downto 0) & Zero_Const2(3 downto 2)  ) when "00", -- lui
 			  ( Zero_Const(3 downto 1) & slt ) when "01", -- verify slt
 			  add_sub_result when "10", -- add/sub result
 			  logic_result when others; -- logic result	

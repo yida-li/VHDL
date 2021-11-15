@@ -11,7 +11,7 @@ end overflow;
 
 architecture arch_overflow of overflow is
 	signal adding, substracting : std_logic;
-	signal complement: std_logic_vector(3 downto 0):
+	signal complement: std_logic_vector(3 downto 0);
 begin
 	complement<=std_logic_vector(signed(not(y)) + 1);
 
