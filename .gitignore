@@ -1,9 +1,14 @@
-/32bit_ALU
 /64bit_ALU
 /128bit_ALU
-/32bit_Register
 /64bit_Register
 /128bit_Register
-/32bit_NextAddress
 /64bit_NextAddress
 /128bit_NextAddress
+/64bit_ProgramCounter
+/128bit_ProgramCounter
+/64bit_InstructionCache
+/128bit_InstructionCache
+/64bit_DataCache
+/128bit_DataCache
+/64bit_SignExtend
+/128bit_SignExtend
