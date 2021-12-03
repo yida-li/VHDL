@@ -1,3 +1,4 @@
+--either TA's or TED's boiler plate
 library IEEE;
 use IEEE.std_logic_1164.all;
 
@@ -25,7 +26,7 @@ architecture arch_control_unit of control_unit is
 signal s_func, s_opcode : std_logic_vector(13 downto 0);  
 
 begin
-			-- Start --
+			
 with func_in select
     s_func <= "11100000100000" when "100000", -- add
               "11101000100000" when "100010", -- sub
@@ -44,15 +45,12 @@ s_opcode <= s_func when "000000",
             "10110000000000" when "001111", -- lui
             "10110000100000" when "001000", -- addi
             "10111010010000" when "001010", -- slti
-
             "10110000110000" when "001100", -- andi
             "10110001110000" when "001101", -- ori
             "10110010110000" when "001110", -- xori
             "10010000100000" when "100011", -- lw
-
             "00010100100000" when "101011", -- sw
             "00000000000001" when "000010", -- j
-
             "00000000001100" when "000001", -- bltz
             "00000000000100" when "000100", -- beq
             "00000000001000" when "000101", -- bne

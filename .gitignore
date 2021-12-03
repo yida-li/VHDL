@@ -12,3 +12,7 @@
 /128bit_DataCache
 /64bit_SignExtend
 /128bit_SignExtend
+/64bit_Controller
+/128bit_Controller
+/64bit_CPU
+/128bit_CPU
